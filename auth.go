@@ -1,42 +1,16 @@
 package main
 
 import (
+	"github.com/gastrodon/groudon"
 	"github.com/imonke/monkebase"
 	"github.com/imonke/monketype"
 
-	"encoding/json"
-	"io/ioutil"
 	"net/http"
 )
 
 var (
-	badRequest map[string]interface{} = map[string]interface{}{"error": "bad_request"}
-	badAuth    map[string]interface{} = map[string]interface{}{"error": "bad_auth"}
+	badAuth map[string]interface{} = map[string]interface{}{"error": "bad_auth"}
 )
-
-type AuthBody struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
-	Secret   string `json:"secret"`
-}
-
-func getBody(request *http.Request) (body AuthBody, err error) {
-	if request.Close {
-		defer request.Body.Close()
-	}
-
-	if request.Body == nil {
-		return
-	}
-
-	var bytes []byte
-	if bytes, err = ioutil.ReadAll(request.Body); err != nil {
-		return
-	}
-
-	json.Unmarshal(bytes, &body)
-	return
-}
 
 func rotatedTokens(id string) (r_map map[string]interface{}, err error) {
 	var token string
@@ -61,46 +35,35 @@ func rotatedTokens(id string) (r_map map[string]interface{}, err error) {
 	return
 }
 
-func authenticate(body AuthBody) (code int, r_map map[string]interface{}, err error) {
+func postAuth(request *http.Request) (code int, r_map map[string]interface{}, err error) {
+	var body AuthBody
+	var external error
+	if err, external = groudon.SerializeBody(request.Body, &body); err != nil || external != nil || (body.Secret == nil && body.Password == nil) {
+		code = 400
+		return
+	}
+
 	var who monketype.User
 	var exists bool
 	if who, exists, err = monkebase.ReadSingleUserEmail(body.Email); err != nil {
 		return
 	}
 
-	var authed bool = false
-
+	var authed bool
 	switch {
 	case !exists:
-	case body.Secret != "":
-		authed, err = monkebase.CheckSecret(who.ID, body.Secret)
-	case body.Password != "":
-		authed, err = monkebase.CheckPassword(who.ID, body.Password)
+	case body.Secret != nil && *body.Secret != "":
+		authed, err = monkebase.CheckSecret(who.ID, *body.Secret)
+	case body.Password != nil && *body.Password != "":
+		authed, err = monkebase.CheckPassword(who.ID, *body.Password)
 	}
 
 	if authed && err == nil {
-		r_map, err = rotatedTokens(who.ID)
 		code = 200
+		r_map, err = rotatedTokens(who.ID)
 		return
 	}
 
 	code = 401
-	r_map = badAuth
-	return
-}
-
-func postAuth(request *http.Request) (code int, r_map map[string]interface{}, err error) {
-	var body AuthBody
-	body, err = getBody(request)
-
-	switch {
-	case err != nil:
-	case body.Password == "" && body.Secret == "", body.Email == "":
-		code = 400
-		r_map = badRequest
-	default:
-		code, r_map, err = authenticate(body)
-	}
-
 	return
 }

@@ -134,17 +134,12 @@ func Test_badjson(test *testing.T) {
 	}
 
 	var code int
-	var r_map map[string]interface{}
-	if code, r_map, err = postAuth(request); err != nil {
+	if code, _, err = postAuth(request); err != nil {
 		test.Fatal(err)
 	}
 
 	if code != 400 {
 		test.Errorf("secret auth did not return 400! status cdoe %d", code)
-	}
-
-	if r_map["error"].(string) != "bad_request" {
-		test.Errorf("%#v", r_map)
 	}
 }
 
@@ -168,7 +163,6 @@ func Test_badrequest(test *testing.T) {
 
 	var request *http.Request
 	var code int
-	var r_map map[string]interface{}
 	var err error
 
 	for _, set = range sets {
@@ -176,16 +170,12 @@ func Test_badrequest(test *testing.T) {
 			test.Fatal(err)
 		}
 
-		if code, r_map, err = postAuth(request); err != nil {
+		if code, _, err = postAuth(request); err != nil {
 			test.Fatal(err)
 		}
 
 		if code != 400 {
 			test.Errorf("bad request did not return 400! status code %d", code)
-		}
-
-		if r_map["error"].(string) != "bad_request" {
-			test.Errorf("%#v", r_map)
 		}
 	}
 }
