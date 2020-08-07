@@ -8,5 +8,3 @@ require (
 	github.com/imonke/monkebase v0.0.0-20200729040815-7b886535f0f7
 	github.com/imonke/monketype v0.0.0-20200729032806-76932a99fc50
 )
-
-replace github.com/gastrodon/groudon => ../../../groudon
