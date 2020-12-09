@@ -6,11 +6,15 @@ github.com/gastrodon/groudon v0.0.0-20200801011029-9df5f02a8eb6 h1:+EPYB5adRF1Dc
 github.com/gastrodon/groudon v0.0.0-20200801011029-9df5f02a8eb6/go.mod h1:5pCqXI8gvquh7Lp7S3LOpUgQ32JXWdrIKums+zpPwjs=
 github.com/gastrodon/groudon v0.0.0-20200807033952-0dc9b8454298 h1:s3eTEtTUWMNRUdWVgjFAzHRBkBhrW3B3I50r6jSR70s=
 github.com/gastrodon/groudon v0.0.0-20200807033952-0dc9b8454298/go.mod h1:5pCqXI8gvquh7Lp7S3LOpUgQ32JXWdrIKums+zpPwjs=
+github.com/gastrodon/groudon v0.0.0-20201111174124-cf23fec3827b h1:eizxZ+w6I6azaQ7gFVsAG03z+vvvDh+UbzDWuTtDkPQ=
+github.com/gastrodon/groudon v0.0.0-20201111174124-cf23fec3827b/go.mod h1:5pCqXI8gvquh7Lp7S3LOpUgQ32JXWdrIKums+zpPwjs=
 github.com/go-sql-driver/mysql v1.4.0/go.mod h1:zAC/RDZ24gD3HViQzih4MyKcchzm+sOG5ZlKdlhCg5w=
 github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.1.2 h1:EVhdT+1Kseyi1/pUmXKaFxYsDNy9RQYkMWRH68J/W7Y=
+github.com/google/uuid v1.1.2/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/imonke/monkebase v0.0.0-20200702171637-920be2f7cf25 h1:XKNuaOLEJ7k2SdgAiPqTb/lu0XrcO/DYe+rBSgxos2A=
 github.com/imonke/monkebase v0.0.0-20200702171637-920be2f7cf25/go.mod h1:pC6MDxSZVPb7RwklD6kSb88cfD6+xjnHUsir2Q21K9M=
 github.com/imonke/monkebase v0.0.0-20200704215041-cfba85f68074 h1:KVKFv7QPr6m+B4byZJP6FktNAFO26Zcetrg0UjFXvfs=
@@ -19,6 +23,8 @@ github.com/imonke/monkebase v0.0.0-20200719031609-9a6b2e7df88f h1:XnGe+P9XuTIYcA
 github.com/imonke/monkebase v0.0.0-20200719031609-9a6b2e7df88f/go.mod h1:BLU+UOnHsn9p2atIqkVb7Pp4eqlgEKJbaO5qJfmrOHM=
 github.com/imonke/monkebase v0.0.0-20200729040815-7b886535f0f7 h1:uP0pTRkjCrfIadiGjb2vvqx+80Yp071VzfSMWmRDPSo=
 github.com/imonke/monkebase v0.0.0-20200729040815-7b886535f0f7/go.mod h1:4LVGEd9tPFV87yLMhJzpsHz5qxWiJZ8DozqUgUW5/EU=
+github.com/imonke/monkebase v0.0.0-20201112031310-8b05081cb292 h1:sMwUtT4hI4ki8fdabPGPMbufmD34D1ww/KSO564xIaM=
+github.com/imonke/monkebase v0.0.0-20201112031310-8b05081cb292/go.mod h1:ZfXu2Q+i8POwrgitRKY9YI2L+HeH7u2ZpGpBUdmlNgM=
 github.com/imonke/monketype v0.0.0-20200702003911-d46b79f825eb h1:T8l72WMRhMQP0so5pyzk6gZazG0nGKqMyecBjPOlxxk=
 github.com/imonke/monketype v0.0.0-20200702003911-d46b79f825eb/go.mod h1:/6d6kpJ4zrDTyopAyygmuFmxxPDyxfnrxBkS2biIU9M=
 github.com/imonke/monketype v0.0.0-20200704082322-8bd39803870c h1:aIpkv4L0fjpAluXwUytA0+Gj31S14N6BI96lfZPU0Qc=
@@ -27,6 +33,9 @@ github.com/imonke/monketype v0.0.0-20200718195524-2d705e2aa768 h1:eLvIlbi2B325zW
 github.com/imonke/monketype v0.0.0-20200718195524-2d705e2aa768/go.mod h1:+P64NN1CPbgU+kebfKsap37nZ8dR90c5SWO62/ZykUc=
 github.com/imonke/monketype v0.0.0-20200729032806-76932a99fc50 h1:8A9h4ozgVAZwQNU8btdWw3K1IOIk74rVj/5DPbc1KXM=
 github.com/imonke/monketype v0.0.0-20200729032806-76932a99fc50/go.mod h1:+P64NN1CPbgU+kebfKsap37nZ8dR90c5SWO62/ZykUc=
+github.com/imonke/monketype v0.0.0-20201108235822-b761f9de344a/go.mod h1:+P64NN1CPbgU+kebfKsap37nZ8dR90c5SWO62/ZykUc=
+github.com/imonke/monketype v0.0.0-20201111232752-19268649a84b h1:5IyAY1H5mRLxMoCD68K99xNP1ZtuWCYHG8e9RD9bmu4=
+github.com/imonke/monketype v0.0.0-20201111232752-19268649a84b/go.mod h1:+P64NN1CPbgU+kebfKsap37nZ8dR90c5SWO62/ZykUc=
 github.com/jmoiron/sqlx v1.2.0 h1:41Ip0zITnmWNR/vHV+S4m+VoUivnWY5E4OJfLZjCJMA=
 github.com/jmoiron/sqlx v1.2.0/go.mod h1:1FEQNm3xlJgrMD+FBdI9+xvCksHtbpVBBw5dYhBSsks=
 github.com/lib/pq v1.0.0 h1:X5PMW56eZitiTeO7tKzZxFCSpbFZJtkMMooicw2us9A=
@@ -37,6 +46,8 @@ github.com/mitchellh/mapstructure v1.3.2 h1:mRS76wmkOn3KkKAyXDu42V+6ebnXWIztFSYG
 github.com/mitchellh/mapstructure v1.3.2/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/mitchellh/mapstructure v1.3.3 h1:SzB1nHZ2Xi+17FP0zVQBHIZqvwRN9408fJO8h+eeNA8=
 github.com/mitchellh/mapstructure v1.3.3/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
+github.com/mitchellh/mapstructure v1.4.0 h1:7ks8ZkOP5/ujthUsT07rNv+nkLXCQWKNHuwzOAesEks=
+github.com/mitchellh/mapstructure v1.4.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 h1:psW17arqaxU48Z5kZ0CQnkZWQJsqcURM6tKiBApRjXI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
@@ -44,7 +55,11 @@ golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899 h1:DZhuSZLsGlFL4CmhA8BcRA
 golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
 golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de h1:ikNHVSjEfnvz6sxdSPCaPt572qowuyMDMJLLm3Db3ig=
 golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
+golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9 h1:sYNJzB4J8toYPQTM6pAkcmBRgw9SnQKP9oXCHfgy604=
+golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9/go.mod h1:jdWPYTVW3xRLrWPugEBEK3UY2ZEsg3UU495nc5E+M+I=
 golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20191026070338-33540a1f6037/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/term v0.0.0-20201117132131-f5c789dd3221/go.mod h1:Nr5EML6q2oocZ2LXRh80K7BxOlk5/8JxuGnuhpl+muw=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
