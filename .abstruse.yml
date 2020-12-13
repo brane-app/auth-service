@@ -13,8 +13,7 @@ before_script:
     - sudo mysql -uroot -e"CREATE USER 'imonke'@'localhost'"
     - sudo mysql -uroot -e"GRANT ALL PRIVILEGES ON imonke.* TO 'imonke'@'localhost'"
     - bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-    - source /home/abstruse/.gvm/scripts/gvm
-    - echo $GOVERSION
+    - source /home/abstruse/.gvm/scripts/gvm-default
     - gvm install go$GOVERSION
     - gvm use go$GOVERSION --default
 script:
