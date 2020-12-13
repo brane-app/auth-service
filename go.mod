@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	git.gastrodon.io/imonke/monkebase v0.0.0-20201213065506-fa56cc5fe191
+	git.gastrodon.io/imonke/monkelib v0.0.0-20201213070540-43927e1603c9 // indirect
 	git.gastrodon.io/imonke/monketype v0.0.0-20201213055509-5f764755b22d
 	github.com/gastrodon/groudon v0.0.0-20201111174124-cf23fec3827b
 	github.com/google/uuid v1.1.2

@@ -1,5 +1,7 @@
 git.gastrodon.io/imonke/monkebase v0.0.0-20201213065506-fa56cc5fe191 h1:j9F1PXr8VgadRx8LBWp3kERcvy7E4GBwui4RdGeJezo=
 git.gastrodon.io/imonke/monkebase v0.0.0-20201213065506-fa56cc5fe191/go.mod h1:/67JIA66siHa717mkbgahnFZs9m+XOn5TFNuuIwtOEg=
+git.gastrodon.io/imonke/monkelib v0.0.0-20201213070540-43927e1603c9 h1:9p0WP/yqApYt9ltw7eugZhCkGVlkKcyXzfDhJZTJWhA=
+git.gastrodon.io/imonke/monkelib v0.0.0-20201213070540-43927e1603c9/go.mod h1:ci6chybIAX9XGpmG3oQYJJni/c4NzAJN14CIFeuABkI=
 git.gastrodon.io/imonke/monketype v0.0.0-20201213055509-5f764755b22d h1:6H3q6KguismcdYW8I6na/QZVYm+jfD49t8HlFcF0S+I=
 git.gastrodon.io/imonke/monketype v0.0.0-20201213055509-5f764755b22d/go.mod h1:caFw4qbdFJb/Sf+Y9MOyttX3SOo6aMLVsM6w6RJ78bM=
 github.com/gastrodon/groudon v0.0.0-20200703235457-2189c8855d11 h1:LX5j53+ZhKqvDmM7uhbH03bm7pSK3jrfrLlP/WjTEYA=
@@ -27,6 +29,7 @@ github.com/imonke/monkebase v0.0.0-20200719031609-9a6b2e7df88f h1:XnGe+P9XuTIYcA
 github.com/imonke/monkebase v0.0.0-20200719031609-9a6b2e7df88f/go.mod h1:BLU+UOnHsn9p2atIqkVb7Pp4eqlgEKJbaO5qJfmrOHM=
 github.com/imonke/monkebase v0.0.0-20200729040815-7b886535f0f7 h1:uP0pTRkjCrfIadiGjb2vvqx+80Yp071VzfSMWmRDPSo=
 github.com/imonke/monkebase v0.0.0-20200729040815-7b886535f0f7/go.mod h1:4LVGEd9tPFV87yLMhJzpsHz5qxWiJZ8DozqUgUW5/EU=
+github.com/imonke/monkebase v0.0.0-20201111032832-5890c2b1cc4c/go.mod h1:ZfXu2Q+i8POwrgitRKY9YI2L+HeH7u2ZpGpBUdmlNgM=
 github.com/imonke/monkebase v0.0.0-20201112031310-8b05081cb292 h1:sMwUtT4hI4ki8fdabPGPMbufmD34D1ww/KSO564xIaM=
 github.com/imonke/monkebase v0.0.0-20201112031310-8b05081cb292/go.mod h1:ZfXu2Q+i8POwrgitRKY9YI2L+HeH7u2ZpGpBUdmlNgM=
 github.com/imonke/monkebase v0.0.0-20201212230209-6c87775a51b2 h1:88KH5+T+Z2MInFxCueAOW1PbSD6nQPuysCaxjsr2UNw=
@@ -61,6 +64,7 @@ golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899 h1:DZhuSZLsGlFL4CmhA8BcRA
 golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
 golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de h1:ikNHVSjEfnvz6sxdSPCaPt572qowuyMDMJLLm3Db3ig=
 golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
+golang.org/x/crypto v0.0.0-20201016220609-9e8e0b390897/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
 golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9 h1:sYNJzB4J8toYPQTM6pAkcmBRgw9SnQKP9oXCHfgy604=
 golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9/go.mod h1:jdWPYTVW3xRLrWPugEBEK3UY2ZEsg3UU495nc5E+M+I=
 golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
