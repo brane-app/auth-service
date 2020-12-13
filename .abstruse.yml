@@ -1,8 +1,14 @@
-image: golang
 branches:
     - .*
 matrix:
     - env: MONKEBASE_CONNECTION=imonke@unix(/run/mysqld/mysqld.sock)/imonke
+      image: golang:latest
+    - env: MONKEBASE_CONNECTION=imonke@unix(/run/mysqld/mysqld.sock)/imonke
+      image: golang:1.15
+    - env: MONKEBASE_CONNECTION=imonke@unix(/run/mysqld/mysqld.sock)/imonke
+      image: golang:1.14
+    - env: MONKEBASE_CONNECTION=imonke@unix(/run/mysqld/mysqld.sock)/imonke
+      image: golang:1.13
 before_script:
     - sudo apt-get update
     - sudo apt-get install -y mariadb-server mariadb-client git curl binutils bison gcc make
