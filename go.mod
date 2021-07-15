@@ -1,4 +1,4 @@
-module git.gastrodon.io/imonke/auth-service
+module github.com/brane-app/auth-service
 
 go 1.13
 
