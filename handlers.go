@@ -2,6 +2,8 @@ package main
 
 import (
 	"github.com/gastrodon/groudon/v2"
+
+	"os"
 )
 
 func register_handlers() {
