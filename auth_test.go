@@ -56,7 +56,7 @@ func authOK(test *testing.T, auth map[string]interface{}) {
 }
 
 func TestMain(main *testing.M) {
-	monkebase.Connect(os.Getenv("MONKEBASE_CONNECTION"))
+	monkebase.Connect(os.Getenv("DATABASE_CONNECTION"))
 	monkebase.WriteUser(user.Map())
 	monkebase.SetPassword(user.ID, password)
 	os.Exit(main.Run())
