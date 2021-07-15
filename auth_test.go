@@ -1,8 +1,8 @@
 package main
 
 import (
-	"git.gastrodon.io/imonke/monkebase"
-	"git.gastrodon.io/imonke/monketype"
+	"github.com/brane-app/database-library"
+	"github.com/brane-app/types-library"
 
 	"bytes"
 	"encoding/base64"
@@ -19,7 +19,7 @@ const (
 )
 
 var (
-	user monketype.User = monketype.NewUser(nick, "", email)
+	user types.User = types.NewUser(nick, "", email)
 )
 
 func authOK(test *testing.T, auth map[string]interface{}) {
@@ -41,8 +41,8 @@ func authOK(test *testing.T, auth map[string]interface{}) {
 		test.Fatal(err)
 	}
 
-	if len(token_bytes) != monkebase.TOKEN_LENGTH {
-		test.Errorf("token %s is not %d bytes long!", auth["token"], monkebase.TOKEN_LENGTH)
+	if len(token_bytes) != database.TOKEN_LENGTH {
+		test.Errorf("token %s is not %d bytes long!", auth["token"], database.TOKEN_LENGTH)
 	}
 
 	var secret_bytes []byte
@@ -50,15 +50,15 @@ func authOK(test *testing.T, auth map[string]interface{}) {
 		test.Fatal(err)
 	}
 
-	if len(secret_bytes) != monkebase.SECRET_LENGTH {
-		test.Errorf("secret %s is not %d bytes long!", auth["secret"], monkebase.SECRET_LENGTH)
+	if len(secret_bytes) != database.SECRET_LENGTH {
+		test.Errorf("secret %s is not %d bytes long!", auth["secret"], database.SECRET_LENGTH)
 	}
 }
 
 func TestMain(main *testing.M) {
-	monkebase.Connect(os.Getenv("DATABASE_CONNECTION"))
-	monkebase.WriteUser(user.Map())
-	monkebase.SetPassword(user.ID, password)
+	database.Connect(os.Getenv("DATABASE_CONNECTION"))
+	database.WriteUser(user.Map())
+	database.SetPassword(user.ID, password)
 	os.Exit(main.Run())
 }
 
@@ -99,7 +99,7 @@ func Test_password(test *testing.T) {
 func Test_secret(test *testing.T) {
 	var secret string
 	var err error
-	if secret, err = monkebase.CreateSecret(user.ID); err != nil {
+	if secret, err = database.CreateSecret(user.ID); err != nil {
 		test.Fatal(err)
 	}
 

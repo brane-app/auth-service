@@ -1,8 +1,8 @@
 package main
 
 import (
-	"git.gastrodon.io/imonke/monkebase"
-	"git.gastrodon.io/imonke/monketype"
+	"github.com/brane-app/database-library"
+	"github.com/brane-app/types-library"
 	"github.com/gastrodon/groudon/v2"
 
 	"net/http"
@@ -15,12 +15,12 @@ var (
 func rotatedTokens(id string) (r_map map[string]interface{}, err error) {
 	var token string
 	var expires int64
-	if token, expires, err = monkebase.CreateToken(id); err != nil {
+	if token, expires, err = database.CreateToken(id); err != nil {
 		return
 	}
 
 	var secret string
-	if secret, err = monkebase.CreateSecret(id); err != nil {
+	if secret, err = database.CreateSecret(id); err != nil {
 		return
 	}
 
@@ -43,9 +43,9 @@ func postAuth(request *http.Request) (code int, r_map map[string]interface{}, er
 		return
 	}
 
-	var who monketype.User
+	var who types.User
 	var exists bool
-	if who, exists, err = monkebase.ReadSingleUserEmail(body.Email); err != nil {
+	if who, exists, err = database.ReadSingleUserEmail(body.Email); err != nil {
 		return
 	}
 
@@ -53,9 +53,9 @@ func postAuth(request *http.Request) (code int, r_map map[string]interface{}, er
 	switch {
 	case !exists:
 	case body.Secret != nil && *body.Secret != "":
-		authed, err = monkebase.CheckSecret(who.ID, *body.Secret)
+		authed, err = database.CheckSecret(who.ID, *body.Secret)
 	case body.Password != nil && *body.Password != "":
-		authed, err = monkebase.CheckPassword(who.ID, *body.Password)
+		authed, err = database.CheckPassword(who.ID, *body.Password)
 	}
 
 	if authed && err == nil {
