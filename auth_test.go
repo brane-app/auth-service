@@ -8,7 +8,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"net/http"
-	"os"
 	"testing"
 )
 
@@ -55,11 +54,9 @@ func authOK(test *testing.T, auth map[string]interface{}) {
 	}
 }
 
-func TestMain(main *testing.M) {
-	database.Connect(os.Getenv("DATABASE_CONNECTION"))
+func setup(main *testing.M) {
 	database.WriteUser(user.Map())
 	database.SetPassword(user.ID, password)
-	os.Exit(main.Run())
 }
 
 func mustMarshal(it interface{}) (data []byte) {
