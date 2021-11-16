@@ -6,8 +6,12 @@ import (
 	"os"
 )
 
-func register_handlers() {
-	prefix := os.Getenv("PATH_PREFIX")
+var (
+	prefix = os.Getenv("PATH_PREFIX")
 
-	groudon.AddHandler("POST", "^"+prefix+"/$", postAuth)
+	routeRoot = "^" + prefix + "/?$"
+)
+
+func register_handlers() {
+	groudon.AddHandler("POST", routeRoot, postAuth)
 }
